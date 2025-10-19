@@ -146,6 +146,12 @@ GEM
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)
+    lograge (0.14.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
+    logster (2.20.1)
     loofah (2.24.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -247,9 +253,15 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.26.1)
+      connection_pool
     regexp_parser (2.11.3)
     reline (0.6.2)
       io-console (~> 0.5)
+    request_store (1.7.0)
+      rack (>= 1.4)
     rexml (3.4.4)
     rubocop (1.81.1)
       json (~> 2.3)
@@ -376,9 +388,12 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
+  lograge
+  logster
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.3)
+  redis
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
