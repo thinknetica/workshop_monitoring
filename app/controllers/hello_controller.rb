@@ -1,6 +1,12 @@
 class HelloController < ApplicationController
   def index
     Yabeda.top_shop.index_page_opened.increment
+    # поход в платёжную систему
+    # if perf_test?
+    #   sleep 5
+    # esle
+    #   go_to_payment_gateway
+    # end
     render plain: "Главная страница"
   end
 
